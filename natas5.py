@@ -1,7 +1,6 @@
-#%%
 import requests
 import re
-import utils
+
 name = "natas5"
 
 url = f"http://{name}.natas.labs.overthewire.org/index.php"
@@ -23,4 +22,3 @@ except IndexError:
     After I did that, password revealed.
 
 """
-# %%
