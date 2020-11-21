@@ -9,8 +9,12 @@ auth = ("natas1","gtVrDuiDfck831PqWsLEZy5gyDz1clto")
 session = requests.session()
 
 logon = session.post(url,auth=auth)
-passwd = re.findall(r'password for natas\d is (\S+)',str(logon.content))[0]
-print(passwd) 
+regex = re.compile(r'password for natas2 is (\S+)')
+try:
+    passwd = regex.findall(logon.text)[0]
+    print(passwd)
+except IndexError:
+    print("password not found")
 
 """Natas 1
 This one wasn't any harder than the Natas0. Site told me

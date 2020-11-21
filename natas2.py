@@ -11,8 +11,12 @@ auth = (f"{name}","ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi")
 session = requests.session()
 
 logon = session.post(url,auth=auth)
-passwd = re.findall(r'natas3:([\w\d]+)',str(logon.content))[0]
-print(passwd) 
+regex = re.compile(r'natas3:([\w\d]+)')
+try:
+    passwd = regex.findall(logon.text)[0]
+    print(passwd)
+except IndexError:
+    print("password not found")
 
 """Natas 2
 This one hinted me the result by showing one pixel image file

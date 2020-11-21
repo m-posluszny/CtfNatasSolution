@@ -11,8 +11,12 @@ auth = (f"{name}","sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14")
 session = requests.session()
 
 logon = session.post(url,auth=auth)
-passwd = re.findall(r'natas4:([\w\d]+)',str(logon.content))[0]
-print(passwd) 
+regex = re.compile(r'natas4:([\w\d]+)')
+try:
+    passwd = regex.findall(logon.text)[0]
+    print(passwd)
+except IndexError:
+    print("password not found")
 
 """Natas 3
 This one required some googling. I need to find out how the site can

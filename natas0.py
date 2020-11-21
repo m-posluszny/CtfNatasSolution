@@ -9,9 +9,12 @@ auth = ("natas0","natas0")
 session = requests.session()
 
 logon = session.post(url,auth=auth)
-passwd = re.findall(r'password for natas\d is (\S+)',str(logon.content))[0]
-print(passwd) 
-
+regex = re.compile(r'password for natas1 is (\S+)')
+try:
+    passwd = regex.findall(logon.text)[0]
+    print(passwd)
+except IndexError:
+    print("password not found")
 
 """
 Natas0 is pretty simple
