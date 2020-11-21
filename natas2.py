@@ -16,7 +16,7 @@ try:
     passwd = regex.findall(logon.text)[0]
     print(passwd)
 except IndexError:
-    print("password not found")
+    ...
 
 """Natas 2
 This one hinted me the result by showing one pixel image file

@@ -14,7 +14,7 @@ try:
     passwd = regex.findall(logon.text)[0]
     print(passwd)
 except IndexError:
-    print("password not found")
+    ...
 
 """
 Natas0 is pretty simple
