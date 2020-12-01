@@ -6,7 +6,7 @@
 >Whole wargame availabale at overthewire.org/wargames/natas/\
 >Using **Python 3.8.1** and **requests lib**.
 
-## Natas Completion ![26%](https://progress-bar.dev/26)
+## Natas Completion ![29%](https://progress-bar.dev/29)
 
 - [x] Natas0
 - [x] Natas1
@@ -17,7 +17,7 @@
 - [x] Natas6
 - [x] Natas7
 - [x] Natas8
-- [ ] Natas9
+- [x] Natas9
 - [ ] Natas10
 - [ ] Natas11
 - [ ] Natas12
